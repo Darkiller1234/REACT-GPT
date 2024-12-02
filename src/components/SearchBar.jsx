@@ -1,15 +1,16 @@
-import React from 'react';
-import { FaArrowUp } from "react-icons/fa";
+import React, { useState } from 'react'
 import styled from 'styled-components';
+import { FaArrowUp } from "react-icons/fa";
 
 const SearchBar = ({searchText, changeSearchText, clickSearchIcon}) => {
+
     return (
         <SearchBarContainer>
             <SearchInput
                 value={searchText}
                 onChange={changeSearchText}
                 type="text"
-                placeholder='궁금한거 물어보셈ㅇㅇ'
+                placeholder='궁금한 것을 물어보세요....'
             />
             <UploadIconBox
                 search = {searchText}
@@ -30,6 +31,7 @@ export default SearchBar
 const SearchBarContainer = styled.div`
     width: 100%;
     border: 1px solid #f5f5f5;
+    background: #f5f5f5;
     border-radius: 25px;
     height: 52px;
     position: relative;
@@ -45,7 +47,7 @@ const SearchInput = styled.input`
     height: 100%;
 `
 
-const UploadIconBox = styled.button`
+const UploadIconBox = styled.div`
     position: absolute;
     top: 7px;
     right: 8px;
